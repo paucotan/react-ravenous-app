@@ -1,19 +1,6 @@
 import React from "react";
 import styles from "./Business.module.css";
 
-// const business = {
-//   imageSrc:
-//     "https://s3.amazonaws.com/codecademy-content/programs/react/ravenous/pizza.jpg",
-//   name: "MarginOtto Pizzeria",
-//   address: "1010 Paddington Way",
-//   city: "Bordertown",
-//   state: "NY",
-//   zipCode: "10101",
-//   category: "Italian",
-//   rating: 4.5,
-//   reviewCount: 90,
-// };
-
 const Business = (props) => {
   const business = props.business;
   return (
@@ -21,10 +8,18 @@ const Business = (props) => {
       <div className={styles.imageContainer}>
         <img src={business.imageSrc} alt="" />
       </div>
-      <h2>{business.name}</h2>
+      <a href={business.url} target="_blank" rel="noopener noreferrer">
+        <h2>{business.name}</h2>
+      </a>
       <div className={styles.BusinessInformation}>
         <div className={styles.BusinessAddress}>
-          <p>{business.address}</p>
+          <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(business.name + ', '
+            + business.city + ', '
+            + business.state + ' '
+            + business.zipCode)}`}
+             target="_blank" rel="noopener noreferrer">
+            <p>{business.address}</p>
+          </a>
           <p>{business.city}</p>
           <p>{`${business.state} ${business.zipCode}`}</p>
         </div>

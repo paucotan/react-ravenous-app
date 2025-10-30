@@ -7,7 +7,7 @@ const BusinessList = (props) => {
   return (
     <div className={styles.BusinessList}>
       {props.businesses.map((business) => (
-        <Business business={business} key={business.name} />
+        <Business business={business} key={business.id} />
       ))}
     </div>
   );

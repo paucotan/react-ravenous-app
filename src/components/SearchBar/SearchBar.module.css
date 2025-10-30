@@ -15,6 +15,23 @@
   color: #ffffff;
 }
 
+.SearchBarSubmit button {
+  padding: 10px 24px;
+  border-radius: 4px;
+  background-color: #cca353;
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.SearchBarSubmit button:hover,
+.SearchBarSubmit button:focus {
+  background: #e55d50;
+  outline: none;
+}
+
+
 .SearchBarSortOptions li {
   cursor: pointer;
   width: 4.33rem;
